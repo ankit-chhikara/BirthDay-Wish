@@ -59,15 +59,15 @@
 
         <script>
             const images = [
-                            'D:\\Personal_Projects\\BirthdayProject\\Images\\1.jpg',
-                            'D:\\Personal_Projects\\BirthdayProject\\Images\\2.jpg',
-                            'D:\\Personal_Projects\\BirthdayProject\\Images\\3.jpg',
-                            'D:\\Personal_Projects\\BirthdayProject\\Images\\4.jpg',
-                            'D:\\Personal_Projects\\BirthdayProject\\Images\\5.jpg',
+                            'https://github.com/ankit-chhikara/BirthDay-Wish/blob/main/Images/1.jpg',
+                            'https://github.com/ankit-chhikara/BirthDay-Wish/blob/main/Images/2.jpg',
+                            'https://github.com/ankit-chhikara/BirthDay-Wish/blob/main/Images/3.jpg',
+                            'https://github.com/ankit-chhikara/BirthDay-Wish/blob/main/Images/4.jpg',
+                            'https://github.com/ankit-chhikara/BirthDay-Wish/blob/main/Images/5.jpg',
                             ]
             window.onload = () => {
             // preloading
-            document.body.style.backgroundImage = `(${images[0]})`
+            document.body.style.backgroundImage = `url(${images[0]})`
             document.querySelector('.hidden').src = images[1]
             let i = 1
             setInterval(() => {
