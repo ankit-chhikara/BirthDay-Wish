@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Birthday Wishes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"
+        rel="stylesheet"/>
+
+        <style>
+            body {
+              background: #222;
+              color: #fff;
+              font-family: 'Fredericka the Great', serif;
+              margin: 0;
+              height: 100vh;
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+              transition: background-image 1s;
+            }
+      
+            h1 {
+              font-size: 8vh;
+            }
+      
+            h3 {
+              font-size: 4vh;
+              color: #eee9;
+            }
+      
+            h1,
+            h3 {
+              font-weight: 100;
+            }
+      
+            main {
+              background: linear-gradient(0deg, #210a, #210a);
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+      
+            .caption {
+              background: #0007;
+              padding: 20px;
+              border-radius: 3px;
+            }
+      
+            .hidden {
+              display: none;
+            }
+        </style>
+
+        <script>
+            const images = [
+                            'D:\\Personal_Projects\\BirthdayProject\\Images\\1.jpg',
+                            'D:\\Personal_Projects\\BirthdayProject\\Images\\2.jpg',
+                            'D:\\Personal_Projects\\BirthdayProject\\Images\\3.jpg',
+                            'D:\\Personal_Projects\\BirthdayProject\\Images\\4.jpg',
+                            'D:\\Personal_Projects\\BirthdayProject\\Images\\5.jpg',
+                            ]
+            window.onload = () => {
+            // preloading
+            document.body.style.backgroundImage = `(${images[0]})`
+            document.querySelector('.hidden').src = images[1]
+            let i = 1
+            setInterval(() => {
+                document.body.style.backgroundImage = `url(${images[i++]})`
+
+                if (i === images.length) i = 0
+                else {
+                    // preload the next image, so that it transitions smoothly
+                    document.querySelector('.hidden').src = images[i]
+                }
+            }, 7000)
+            }
+        </script>
+    </head>
+    
+    <body>
+        <main>
+            <div class="caption">
+                <h1>Happy Birthday</h1>
+                <h3>Wishing you a very HAPPY BIRTHDAY. I know you find this over the top and all but its your fault ok, 
+                    you are just too special to me. I hope you have a great day and a great year ahead. I hope you get everything you want and more. 
+                    I hope you get to eat all the cake you want and get all the presents you want. I wish you get to spend more time with all the people you love. 
+                    I wish you get to do all the things you love. 
+                </h3>
+            </div>
+        </main>
+        <img class="hidden" alt="preloading" />
+    </body>
+    
+</html>
